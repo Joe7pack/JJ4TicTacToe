@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/blue</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/joey_jupiter_icon</item>
+        <item name="postSplashScreenTheme">@style/Theme.jj3tictactoe</item>
+    </style>
+
+    <style name="MainTheme" parent="Theme.AppCompat.Light">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:windowTitleSize">25dip</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="Theme.jj3tictactoe" parent="MainTheme">
+        <item name="android:windowBackground">@drawable/joey_jupiter_icon</item>
+        <item name="android:textColor">@color/blue</item>
+    </style>
+
+    <style name="Theme.MyApp.Splash" parent="Theme.jj3tictactoe">
+        <!-- Set the background color -->
+        <item name="windowSplashScreenBackground">@color/blue</item>
+        <!-- Set the animated icon (can be a static drawable or AnimatedVectorDrawable) -->
+        <item name="windowSplashScreenAnimatedIcon">@drawable/joey_jupiter_icon</item>
+        <!-- Set the theme to apply after the splash screen is dismissed -->
+        <item name="postSplashScreenTheme">@style/MainTheme</item>
+    </style>
+
+    <!--style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:background">joey_jupiter_icon</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style-->
+
+</resources>
