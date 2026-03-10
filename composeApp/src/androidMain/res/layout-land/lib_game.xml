@@ -28,7 +28,7 @@ android:background="@android:color/black">
 
 </LinearLayout>
 
-<com.guzzardo.jjtictactoe1.GameView
+<com.guzzardo.jj3tictactoe.GameView
     android:id="@+id/game_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"

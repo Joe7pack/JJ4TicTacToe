@@ -4,6 +4,46 @@ import android.content.Context
 import android.util.AttributeSet
 import android.util.Log
 import android.view.View
+import androidx.compose.ui.graphics.ImageBitmap
+import androidx.compose.ui.geometry.Rect
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.RowScope
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.graphics.Canvas
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Paint
+import androidx.compose.ui.graphics.PaintingStyle
+import androidx.compose.ui.graphics.PixelMap
+import androidx.compose.ui.graphics.drawscope.DrawScope
+import androidx.compose.ui.graphics.toPixelMap
+import androidx.compose.ui.unit.IntRect
+
+import jj3tictactoe.composeapp.generated.resources.Res
+import jj3tictactoe.composeapp.generated.resources.allowed_move
+import org.jetbrains.compose.resources.DrawableResource
+import org.jetbrains.compose.resources.imageResource
+import org.jetbrains.compose.resources.painterResource
+import jj3tictactoe.composeapp.generated.resources.lib_circlecrossblue
+import jj3tictactoe.composeapp.generated.resources.lib_circlered
+import jj3tictactoe.composeapp.generated.resources.lib_crossred
+import jj3tictactoe.composeapp.generated.resources.lib_crossgreen
+import jj3tictactoe.composeapp.generated.resources.lib_circleblue
+import jj3tictactoe.composeapp.generated.resources.lib_circlecrossgreen
+import jj3tictactoe.composeapp.generated.resources.lib_circlecrossred
+import jj3tictactoe.composeapp.generated.resources.lib_circlegreen
+import jj3tictactoe.composeapp.generated.resources.lib_crossblue
+import jj3tictactoe.composeapp.generated.resources.prize_token
+import jj3tictactoe.composeapp.generated.resources.taken_move
+import org.jetbrains.compose.resources.imageResource
+import org.jetbrains.compose.resources.stringArrayResource
+import androidx.compose.ui.tooling.preview.Preview
+import kotlin.random.Random
 
 open class GameView(context: Context, attrs: AttributeSet) : CustomView(context, attrs) {
     //CustomView(context, attrs)
@@ -18,6 +58,8 @@ open class GameView(context: Context, attrs: AttributeSet) : CustomView(context,
     var lastHeightMeasureSpec: Int = 0
 
     fun onMeasure2(widthMeasureSpec: Int, heightMeasureSpec: Int) {
+
+        createBitmapFromResource(Res.drawable.allowed_move)
         //super.onMeasure(widthMeasureSpec, heightMeasureSpec)
         //val minw: Int = View.getPaddingLeft + View.getPaddingRight + View.getSuggestedMinimumWidth
         ///val w: Int = View.resolveSizeAndState(minw, widthMeasureSpec, 0)
@@ -87,5 +129,15 @@ open class GameView(context: Context, attrs: AttributeSet) : CustomView(context,
 
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
         Log.i("onSizeChanged--->", "width: $w, height: $h, oldWidth: $oldw, oldHeight: $oldh")
+    }
+
+    //@Composable
+    fun createBitmapFromResource(resource: DrawableResource): ImageBitmap {
+        // The imageResource function is a composable, so it should ideally be called
+        // within a Composable scope. If you need it outside of Compose, you might need
+        // a platform-specific implementation using 'expect/actual' or a third-party library
+        // that handles non-composable resource loading.
+        // For general Compose usage:
+        return imageResource(resource = resource)
     }
 }

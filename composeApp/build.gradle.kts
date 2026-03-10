@@ -7,6 +7,7 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
+    //alias(libs.plugins.koin.android)
 }
 
 kotlin {
@@ -85,9 +86,9 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     //androidTestImplementation(libs.androidx.lifecycle.bom)
 
-    val composeBom = platform("androidx.compose:compose-bom:2026.01.01") // Use the latest version
-    implementation(composeBom)
-    androidTestImplementation(composeBom)
+    //val composeBom = platform("androidx.compose:compose-bom:2026.01.01") // Use the latest version
+    //implementation(composeBom)
+    //androidTestImplementation(composeBom)
 
     debugImplementation(libs.ui.tooling)
     debugImplementation(libs.androidx.ui.tooling)
@@ -107,6 +108,24 @@ dependencies {
     implementation(libs.androidx.core.splashscreen)
 
     implementation(libs.androidx.appcompat.v1xx)
+
+    // Import the Koin BOM
+    implementation(libs.koin.bom) // Use the latest version from the Koin website
+
+    // Koin Core & Android dependencies (no version needed when using the BOM)
+    implementation(libs.koin.core)
+    implementation(libs.koin.android)
+    implementation(libs.koin.annotations)  // For annotation support
+
+
+    // Optional: for Android Architecture Components (ViewModel, etc.)
+    // implementation("io.insert-koin:koin-androidx-viewmodel") // Note: Check official docs for current status
+
+    // Optional: for Jetpack Compose integration
+    // implementation("io.insert-koin:koin-androidx-compose")
+
+
+
 // Use the latest version number
 }
 
