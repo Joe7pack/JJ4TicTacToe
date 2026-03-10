@@ -1,4 +1,4 @@
-package com.guzzardo.jj3tictactoe
+package com.guzzardo.jj4tictactoe
 /*
  * Copyright (C) 2010 The Android Open Source Project
  *
@@ -17,11 +17,11 @@ package com.guzzardo.jj3tictactoe
 import androidx.compose.ui.geometry.Rect
 /*
 import java.util.*
-import com.guzzardo.jj3tictactoe.GameActivity.ClientThread
-import com.guzzardo.jj3tictactoe.WillyShmoApplication.UserPreferences
-import com.guzzardo.jj3tictactoe.WillyShmoApplication.Companion.isNetworkAvailable
-import com.guzzardo.jj3tictactoe.WillyShmoApplication.Companion.prizesAreAvailable
-import com.guzzardo.jj3tictactoe.WillyShmoApplication.Companion.playersTooClose
+import com.guzzardo.jj4tictactoe.GameActivity.ClientThread
+import com.guzzardo.jj4tictactoe.WillyShmoApplication.UserPreferences
+import com.guzzardo.jj4tictactoe.WillyShmoApplication.Companion.isNetworkAvailable
+import com.guzzardo.jj4tictactoe.WillyShmoApplication.Companion.prizesAreAvailable
+import com.guzzardo.jj4tictactoe.WillyShmoApplication.Companion.playersTooClose
  */
 
 import androidx.compose.foundation.Image
@@ -43,23 +43,23 @@ import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.graphics.toPixelMap
 import androidx.compose.ui.unit.IntRect
 //import androidx.lifecycle.viewmodel.compose.viewModel
-//import com.guzzardo.jj3tictactoe.SetTokenColor
-//import jj3tictactoe.GameView.Companion.TOKENSIZE
-//import com.guzzardo.jj3tictactoe.GameView.Companion.mSxy
-import jj3tictactoe.composeapp.generated.resources.Res
-import jj3tictactoe.composeapp.generated.resources.allowed_move
+//import com.guzzardo.jj4tictactoe.SetTokenColor
+//import jj4tictactoe.GameView.Companion.TOKENSIZE
+//import com.guzzardo.jj4tictactoe.GameView.Companion.mSxy
+import jj4tictactoe.composeapp.generated.resources.Res
+import jj4tictactoe.composeapp.generated.resources.allowed_move
 import org.jetbrains.compose.resources.painterResource
-import jj3tictactoe.composeapp.generated.resources.lib_circlecrossblue
-import jj3tictactoe.composeapp.generated.resources.lib_circlered
-import jj3tictactoe.composeapp.generated.resources.lib_crossred
-import jj3tictactoe.composeapp.generated.resources.lib_crossgreen
-import jj3tictactoe.composeapp.generated.resources.lib_circleblue
-import jj3tictactoe.composeapp.generated.resources.lib_circlecrossgreen
-import jj3tictactoe.composeapp.generated.resources.lib_circlecrossred
-import jj3tictactoe.composeapp.generated.resources.lib_circlegreen
-import jj3tictactoe.composeapp.generated.resources.lib_crossblue
-import jj3tictactoe.composeapp.generated.resources.prize_token
-import jj3tictactoe.composeapp.generated.resources.taken_move
+import jj4tictactoe.composeapp.generated.resources.lib_circlecrossblue
+import jj4tictactoe.composeapp.generated.resources.lib_circlered
+import jj4tictactoe.composeapp.generated.resources.lib_crossred
+import jj4tictactoe.composeapp.generated.resources.lib_crossgreen
+import jj4tictactoe.composeapp.generated.resources.lib_circleblue
+import jj4tictactoe.composeapp.generated.resources.lib_circlecrossgreen
+import jj4tictactoe.composeapp.generated.resources.lib_circlecrossred
+import jj4tictactoe.composeapp.generated.resources.lib_circlegreen
+import jj4tictactoe.composeapp.generated.resources.lib_crossblue
+import jj4tictactoe.composeapp.generated.resources.prize_token
+import jj4tictactoe.composeapp.generated.resources.taken_move
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.imageResource
 import org.jetbrains.compose.resources.stringArrayResource
@@ -69,7 +69,7 @@ import kotlin.random.Random
 //@Preview
 //@Composable
 fun TestImage() {
-    val circleCross = imageResource(Res.drawable.lib_circlecrossblue)
+    val circleCross = 1 //imageResource(Res.drawable.lib_circlecrossblue)
 
     Row {
         Image(
