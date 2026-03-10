@@ -1,4 +1,4 @@
-package com.guzzardo.jj3tictactoe
+package com.guzzardo.jj4tictactoe
 
 interface Platform {
     val name: String

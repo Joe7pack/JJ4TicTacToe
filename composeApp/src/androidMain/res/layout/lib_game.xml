@@ -28,7 +28,7 @@
 
 	</LinearLayout>
 
-	<com.guzzardo.jj3tictactoe.GameView
+	<com.guzzardo.jj4tictactoe.GameView
 		android:id="@+id/game_view"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"

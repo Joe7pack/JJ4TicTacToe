@@ -1,4 +1,4 @@
-package com.guzzardo.jj3tictactoe
+package com.guzzardo.jj4tictactoe
 
 import kotlin.test.Test
 import kotlin.test.assertEquals

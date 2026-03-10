@@ -1,10 +1,10 @@
-package com.guzzardo.jj3tictactoe
+package com.guzzardo.jj4tictactoe
 
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.content.res.Resources
 
-actual fun getBitmapImage(bmpResId: Int): Bitmap? {
+actual fun getBitmapImage(bmpResId: Int): Int {
     lateinit var resources: Resources
     //getResources()
     val opts = BitmapFactory.Options()
@@ -19,5 +19,5 @@ actual fun getBitmapImage(bmpResId: Int): Bitmap? {
         d.setBounds(0, 0, w - 1, h - 1)
         d.draw(c)
     } */
-    return bmp
+    return 1
 }

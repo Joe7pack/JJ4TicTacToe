@@ -1,4 +1,4 @@
-package com.guzzardo.jj3tictactoe
+package com.guzzardo.jj4tictactoe
 
 import android.util.Log
 import androidx.compose.animation.AnimatedVisibility
@@ -20,8 +20,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.tooling.preview.Preview
-import jj3tictactoe.composeapp.generated.resources.Res
-import jj3tictactoe.composeapp.generated.resources.compose_multiplatform
+import jj4tictactoe.composeapp.generated.resources.Res
+import jj4tictactoe.composeapp.generated.resources.compose_multiplatform
 import org.jetbrains.compose.resources.painterResource
 
 @Composable

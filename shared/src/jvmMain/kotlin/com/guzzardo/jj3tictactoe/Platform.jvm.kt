@@ -1,4 +1,4 @@
-package com.guzzardo.jj3tictactoe
+package com.guzzardo.jj4tictactoe
 
 class JVMPlatform: Platform {
     override val name: String = "Java ${System.getProperty("java.version")}"

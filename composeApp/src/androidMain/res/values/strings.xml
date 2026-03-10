@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">JJ3TicTacToe</string>
+    <string name="app_name">jj4tictactoe</string>
     <string name="im_done">I\'m done</string>
     <string name="player_1" translatable="false">Player 1</string>
     <string name="player_2" translatable="false">Player 2</string>

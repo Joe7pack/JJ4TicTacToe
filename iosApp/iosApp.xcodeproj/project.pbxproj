@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		78DF6E964B6D9DC3AC3A3291 /* JJ3TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JJ3TicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		78DF6E964B6D9DC3AC3A3291 /* jj4tictactoe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jj4tictactoe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -50,7 +50,7 @@
 		27DD58609F58E125EBA85CA0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				78DF6E964B6D9DC3AC3A3291 /* JJ3TicTacToe.app */,
+				78DF6E964B6D9DC3AC3A3291 /* jj4tictactoe.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,7 +87,7 @@
 			packageProductDependencies = (
 			);
 			productName = iosApp;
-			productReference = 78DF6E964B6D9DC3AC3A3291 /* JJ3TicTacToe.app */;
+			productReference = 78DF6E964B6D9DC3AC3A3291 /* jj4tictactoe.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */

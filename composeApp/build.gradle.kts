@@ -1,5 +1,4 @@
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
-import org.jetbrains.compose.reload.gradle.lifecycle
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
@@ -30,18 +29,18 @@ kotlin {
 
     sourceSets {
         androidMain.dependencies {
-            implementation(libs.ui.tooling.preview)
+            implementation(libs.androidx.ui.tooling.preview)
             implementation(libs.androidx.activity.compose)
         }
         commonMain.dependencies {
-            implementation(libs.components.resources)
+            implementation(compose.components.resources)
             //implementation(libs.lifecycle.viewmodel.compose)
-            implementation(libs.runtime)
-            implementation(libs.foundation)
-            implementation(libs.material3)
-            implementation(libs.material3.adaptive.navigation.suite)
-            implementation(libs.ui)
-            implementation(libs.ui.tooling.preview)
+            implementation(compose.runtime)
+            implementation(compose.foundation)
+            implementation(compose.material3)
+            implementation(libs.adaptive)
+            implementation(compose.ui)
+            implementation(compose.components.uiToolingPreview)
             //implementation(libs.androidx.lifecycle.runtimeCompose)
             implementation(projects.shared)
         }
@@ -52,11 +51,11 @@ kotlin {
 }
 
 android {
-    namespace = "com.guzzardo.jj3tictactoe"
+    namespace = "com.guzzardo.jj4tictactoe"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     defaultConfig {
-        applicationId = "com.guzzardo.jj3tictactoe"
+        applicationId = "com.guzzardo.jj4tictactoe"
         minSdk = libs.versions.android.minSdk.get().toInt()
         targetSdk = libs.versions.android.targetSdk.get().toInt()
         versionCode = 1
@@ -90,7 +89,6 @@ dependencies {
     //implementation(composeBom)
     //androidTestImplementation(composeBom)
 
-    debugImplementation(libs.ui.tooling)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
     implementation(libs.androidx.annotation)
@@ -107,15 +105,13 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.core.splashscreen)
 
-    implementation(libs.androidx.appcompat.v1xx)
-
     // Import the Koin BOM
-    implementation(libs.koin.bom) // Use the latest version from the Koin website
+    // implementation(libs.koin.bom) // Use the latest version from the Koin website
 
     // Koin Core & Android dependencies (no version needed when using the BOM)
-    implementation(libs.koin.core)
-    implementation(libs.koin.android)
-    implementation(libs.koin.annotations)  // For annotation support
+    // implementation(libs.koin.core)
+    // implementation(libs.koin.android)
+    // implementation(libs.koin.annotations)  // For annotation support
 
 
     // Optional: for Android Architecture Components (ViewModel, etc.)
@@ -128,4 +124,3 @@ dependencies {
 
 // Use the latest version number
 }
-

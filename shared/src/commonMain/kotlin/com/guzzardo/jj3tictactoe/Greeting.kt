@@ -1,4 +1,4 @@
-package com.guzzardo.jj3tictactoe
+package com.guzzardo.jj4tictactoe
 
 class Greeting {
     private val platform = getPlatform()

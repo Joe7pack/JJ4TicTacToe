@@ -36,7 +36,7 @@ kotlin {
 }
 
 android {
-    namespace = "com.guzzardo.jj3tictactoe.shared"
+    namespace = "com.guzzardo.jj4tictactoe.shared"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11

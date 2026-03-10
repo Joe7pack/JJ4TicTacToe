@@ -1,4 +1,4 @@
-package com.guzzardo.jj3tictactoe
+package com.guzzardo.jj4tictactoe
 
 import io.ktor.client.request.*
 import io.ktor.client.statement.*

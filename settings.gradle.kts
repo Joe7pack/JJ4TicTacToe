@@ -1,4 +1,4 @@
-rootProject.name = "JJ3TicTacToe"
+rootProject.name = "JJ4TicTacToe"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {
@@ -14,6 +14,9 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
+plugins {
+    id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0"
+}
 
 dependencyResolutionManagement {
     repositories {
@@ -25,6 +28,7 @@ dependencyResolutionManagement {
             }
         }
         mavenCentral()
+        maven("maven.pkg.jetbrains.space")
     }
 }
 

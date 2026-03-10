@@ -1,4 +1,4 @@
-package com.guzzardo.jj3tictactoe
+package com.guzzardo.jj4tictactoe
 
 import android.os.Bundle
 import android.view.View
@@ -21,10 +21,11 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
 
+        /*
         startKoin {
             androidContext(this@MyApplication)
             modules(sharedModule)
-        }
+        } */
 
 
 

@@ -1,28 +1,14 @@
 package com.guzzardo.jj4tictactoe
+
 /*
- * Copyright (C) 2010 The Android Open Source Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 import androidx.compose.ui.geometry.Rect
-/*
+
 import java.util.*
 import com.guzzardo.jj4tictactoe.GameActivity.ClientThread
 import com.guzzardo.jj4tictactoe.WillyShmoApplication.UserPreferences
 import com.guzzardo.jj4tictactoe.WillyShmoApplication.Companion.isNetworkAvailable
 import com.guzzardo.jj4tictactoe.WillyShmoApplication.Companion.prizesAreAvailable
 import com.guzzardo.jj4tictactoe.WillyShmoApplication.Companion.playersTooClose
- */
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
@@ -63,7 +49,6 @@ import jj4tictactoe.composeapp.generated.resources.taken_move
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.imageResource
 import org.jetbrains.compose.resources.stringArrayResource
-import androidx.compose.ui.tooling.preview.Preview
 import kotlin.random.Random
 
 //@Preview
@@ -179,7 +164,7 @@ class GameViewModel(
         }
     }
 
-    /** Contains one of [State.EMPTY], [State.PLAYER1] or [State.PLAYER2] or [State.PLAYERBOTH] where PlayerBoth = XO card.  */
+    // Contains one of [State.EMPTY], [State.PLAYER1] or [State.PLAYER2] or [State.PLAYERBOTH] where PlayerBoth = XO card.
     private val data = arrayOfNulls<State>(BoardSpaceValues.BOARDSIZE)
     val boardSpaceAvailableValues =
         BooleanArray(BoardSpaceValues.BOARDSIZE) // false = not available
@@ -300,7 +285,7 @@ class GameViewModel(
                             drawPlayerToken(canvas, k)
                         }
                         State.PLAYER2 -> drawPlayerToken(canvas, k)
-                        else -> { /* not applicable to player2 */
+                        else -> { // not applicable to player2
                         }
                     }
                 }
@@ -485,21 +470,18 @@ class GameViewModel(
     }
 
     fun setGamePrize(prize: Boolean) {
-        //TODO - uncomment this later
-        /*
         if (prize) {
-        if (isNetworkAvailable && prizesAreAvailable && !playersTooClose) {
-            prizeLocation = mRandom.nextInt(BoardSpaceValues.BOARDSIZE)
-            //mPrizeLocation = 11; //set prize to a fixed location
-            mPrizeXBoardLocation = mPrizeXBoardLocationArray[prizeLocation]
-            mPrizeYBoardLocation = mPrizeYBoardLocationArray[prizeLocation]
+            if (isNetworkAvailable && prizesAreAvailable && !playersTooClose) {
+                prizeLocation = mRandom.nextInt(BoardSpaceValues.BOARDSIZE)
+                //mPrizeLocation = 11; //set prize to a fixed location
+                mPrizeXBoardLocation = mPrizeXBoardLocationArray[prizeLocation]
+                mPrizeYBoardLocation = mPrizeYBoardLocationArray[prizeLocation]
+            }
+        } else {
+            prizeLocation = -1
         }
-    } else {
-        prizeLocation = -1
     }
 
-    */
-    }
     @Composable
     fun InitializeGameValues() {
         for (x in data.indices) {
@@ -621,13 +603,12 @@ class GameViewModel(
                 mTokenColor2
             )
         }
-        /*
+
         if (isClientRunning) {
             sendTokensToServer()
         }
         writeToLog("GameView", "Game started: ${GameActivity.isGameStarted} Opposing player ID:  ${GameActivity.mPlayer2Id}, " +
                 "Opposing player Name:  ${GameActivity.mPlayer2Name}")
-         */
     }
 
     @Composable
@@ -657,7 +638,7 @@ class GameViewModel(
         ball!!.UpdateBall(tokenType, bitmap!!)
     }
 
-    /*
+
     fun sendTokensToServer() {
         try {
             val tokenList = JSONObject()
@@ -680,7 +661,7 @@ class GameViewModel(
         } catch (e: JSONException) {
             mGameActivity!!.sendToastMessage(e.message)
         }
-    } */
+    }
 
     private fun resetUnusedTokens() {
         for (ball in mColorBall) {
@@ -827,11 +808,10 @@ class GameViewModel(
         }
     }
 
-    /*
+
     fun SetAvailableMoves(selectedCell: Int, boardSpaceValue: IntArray, boardSpaceAvailable: BooleanArray) {
         setAvailableMoves(null, selectedCell, boardSpaceValue, boardSpaceAvailable)
     }
-     */
 
     //	if the position checked is occupied determine if left, right, up and down exist
     //	for each direction that exists check if its already occupied
@@ -966,7 +946,6 @@ class GameViewModel(
         resetUnusedTokens()
     }
 
-    /*
     @Composable
     fun onTouchEvent(event: MotionEvent): Boolean {
         if (mViewDisabled) return false
@@ -1225,7 +1204,7 @@ class GameViewModel(
         }
         return false
     }
-    */
+
 
     fun selectSpecificComputerToken(type: Int, offense: Boolean): Int {
         for (x in 0..3) {
@@ -1332,7 +1311,7 @@ class GameViewModel(
         //mHandler.removeMessages(MSG_BLINK_SQUARE)
     }
 
-    /*
+
     private inner class MyHandler : Handler.Callback {
         override fun handleMessage(msg: Message): Boolean {
             if (msg.what == MSG_BLINK) {
@@ -1364,7 +1343,6 @@ class GameViewModel(
             return false
         }
     }
-    */
 
     fun disableBall() {
         if (ballMoved > -1) {
@@ -1377,7 +1355,7 @@ class GameViewModel(
         mColorBall[ballId]!!.isDisabled = true
     }
 
-    /*
+
 fun setClient(clientThread: ClientThread?) {
     mClientThread = clientThread
 }
@@ -1389,7 +1367,7 @@ private val isClientRunning: Boolean
 fun setGameActivity(gameActivity: GameActivity?) {
     mGameActivity = gameActivity
 }
- */
+
 
     private val sharedPreferences: Unit
         get() {
@@ -1567,11 +1545,11 @@ fun setGameActivity(gameActivity: GameActivity?) {
 
         //private lateinit var resources: Resources
         private fun writeToLog(filter: String, msg: String) {
-            /*
+
             if ("true".equals(resources.getString(R.string.debug), ignoreCase = true)) {
                 Log.d(filter, msg)
             }
-             */
+
         }
         var mBmpCrossPlayer1: ImageBitmap? = null
         var mBmpCrossPlayer2: ImageBitmap? = null
@@ -1598,5 +1576,5 @@ fun setGameActivity(gameActivity: GameActivity?) {
         INITIALIZATIONCOMPLETED = false
     }
 }
-
+*/
 

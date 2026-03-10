@@ -1,4 +1,4 @@
-package com.guzzardo.jj3tictactoe
+package com.guzzardo.jj4tictactoe
 
 import android.content.Context
 import android.util.AttributeSet
@@ -24,22 +24,22 @@ import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.graphics.toPixelMap
 import androidx.compose.ui.unit.IntRect
 
-import jj3tictactoe.composeapp.generated.resources.Res
-import jj3tictactoe.composeapp.generated.resources.allowed_move
+import jj4tictactoe.composeapp.generated.resources.Res
+import jj4tictactoe.composeapp.generated.resources.allowed_move
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.imageResource
 import org.jetbrains.compose.resources.painterResource
-import jj3tictactoe.composeapp.generated.resources.lib_circlecrossblue
-import jj3tictactoe.composeapp.generated.resources.lib_circlered
-import jj3tictactoe.composeapp.generated.resources.lib_crossred
-import jj3tictactoe.composeapp.generated.resources.lib_crossgreen
-import jj3tictactoe.composeapp.generated.resources.lib_circleblue
-import jj3tictactoe.composeapp.generated.resources.lib_circlecrossgreen
-import jj3tictactoe.composeapp.generated.resources.lib_circlecrossred
-import jj3tictactoe.composeapp.generated.resources.lib_circlegreen
-import jj3tictactoe.composeapp.generated.resources.lib_crossblue
-import jj3tictactoe.composeapp.generated.resources.prize_token
-import jj3tictactoe.composeapp.generated.resources.taken_move
+import jj4tictactoe.composeapp.generated.resources.lib_circlecrossblue
+import jj4tictactoe.composeapp.generated.resources.lib_circlered
+import jj4tictactoe.composeapp.generated.resources.lib_crossred
+import jj4tictactoe.composeapp.generated.resources.lib_crossgreen
+import jj4tictactoe.composeapp.generated.resources.lib_circleblue
+import jj4tictactoe.composeapp.generated.resources.lib_circlecrossgreen
+import jj4tictactoe.composeapp.generated.resources.lib_circlecrossred
+import jj4tictactoe.composeapp.generated.resources.lib_circlegreen
+import jj4tictactoe.composeapp.generated.resources.lib_crossblue
+import jj4tictactoe.composeapp.generated.resources.prize_token
+import jj4tictactoe.composeapp.generated.resources.taken_move
 import org.jetbrains.compose.resources.imageResource
 import org.jetbrains.compose.resources.stringArrayResource
 import androidx.compose.ui.tooling.preview.Preview
@@ -132,12 +132,12 @@ open class GameView(context: Context, attrs: AttributeSet) : CustomView(context,
     }
 
     //@Composable
-    fun createBitmapFromResource(resource: DrawableResource): ImageBitmap {
+    fun createBitmapFromResource(resource: DrawableResource): Int {
         // The imageResource function is a composable, so it should ideally be called
         // within a Composable scope. If you need it outside of Compose, you might need
         // a platform-specific implementation using 'expect/actual' or a third-party library
         // that handles non-composable resource loading.
         // For general Compose usage:
-        return imageResource(resource = resource)
+        return 1 //imageResource(resource = resource)
     }
 }
